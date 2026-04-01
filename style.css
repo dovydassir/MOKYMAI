@@ -50,3 +50,17 @@ div.gallery {
   width: 30%;
   padding: 5px;
 }
+
+.remelis {
+    border: 2px solid red;
+    padding: 10px;
+}
+.konteineris {
+    text-align: center;
+}
+.stulpelis {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    border: 1px solid black;
+}
