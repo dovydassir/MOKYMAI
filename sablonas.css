@@ -1,0 +1,104 @@
+﻿.aa {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: bisque;
+  margin: 5px;
+  padding: 20px;
+  width: 400px;
+  display: block;
+} 
+.bb {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: red;
+  margin: 5px;
+  padding: 60px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+.cc {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: blue;
+  margin: 5px;
+  padding: 60px;
+  width: 165px;
+  display: inline-block;
+}
+.dd {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: yellow;
+  margin: 5px;
+  padding: 20px;
+  width: 400px;
+  display: block;
+}
+
+
+
+
+.header1 {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;  
+  background-color: bisque;
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+  display: inline-block;
+}
+.header2 {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: red;
+  margin: 20px;
+  padding: 60px;
+  width: 20px;
+  display: block
+}
+.header3 {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: blue;
+  margin: 20px;
+  padding: 60px;
+  width: 200px;
+}
+.header4 {
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  background-color: yellow;
+  margin: 20px;
+  padding: 20px;
+  width: 400px;
+}
+
+
+
+
+.sachmatai > div {
+  width: 75px;
+  height: 75px;
+  padding: 10px;
+  margin: 2px;
+  display: inline-block;
+  background-color: gray;
+}
+.sachmatai {
+  width: 500px;
+}
+.sachmatai > div:nth-child(even) {
+  background-color: rgb(23, 122, 104);
+}
+.sachmatai > div.red {
+  background-color: red;  
+}
