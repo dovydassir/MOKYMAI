@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pirmasis, .antrasis, .treciasis {
+    flex: 1;
+}
+
+.logo {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(197, 20, 20);
+    align-items: center
+}
+
+.header {
+    display: flex;
+    width: 60%;
+    height: 50px;
+    background-color: rgb(20, 197, 20);
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.pirmasis   {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: center;
+    gap: 10px;
+    background-color: lightseagreen;
+    color: rgb(24, 17, 17);
+    font-size: 20px;
+    align-items: center
+}
+.antrasis {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(178, 32, 117);
+    color: rgb(20, 4, 4);
+    font-size: 20px;
+    align-items: center
+}
+.treciasis {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgb(83, 32, 178);
+    color: rgb(10, 19, 11);
+    font-size: 20px;
+    align-items: center
+}
+
+.kortelės {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.kortelė {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    gap: 10px;
+    background-color: lightgray;
+    color: black;
+    font-size: 16px;
+    align-items: center;
+    margin: 10px;
+}
+
+.centras {
+    flex:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background-color: lightgreen;
+}
+
+.vidurys {
+    background: blue;
+    padding: 50px;
+}
+
+.loyaut {
+    display: flex;
+    flex: 1;
+
+    
+}
+
+.sidebar {
+    width: 50px;
+    background: lightcoral;
+}
+.content {
+    width: 100px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background: lightblue;
+}
+
+.apimti {
+    display: flex;      
+}
