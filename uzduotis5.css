@@ -1,0 +1,21 @@
+.puslapio-konteineris {
+
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+html, body {
+    height: 100%;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex: 1; 
+    align-items: center; 
+}
+footer {
+    display: flex;
+    align-items: flex-end;
+}

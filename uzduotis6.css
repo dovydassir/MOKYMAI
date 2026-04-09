@@ -1,0 +1,23 @@
+
+.stulpelių-keitimas {
+    display: flex;
+    flex-direction: row;
+}
+.stulpelis {
+    background-color: rgb(122, 202, 255);
+    width: 100px;
+    height: 100px;
+    margin: 10px;   
+    border: solid 1px black;
+}
+
+@media (max-width: 500px) {
+  .stulpelių-keitimas {
+    background-color: rgb(77, 3, 3);
+    flex-direction: column;
+  }
+
+  .stulpelis {
+    width: 100%;
+  }
+}

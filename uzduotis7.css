@@ -1,0 +1,17 @@
+
+.uzduotis7 {
+    display: flex;
+}
+.didelis {
+    flex: 2;
+    background-color: rgb(122, 202, 255);
+    height: 100px;
+    text-align: center;
+}
+.mazas {
+    flex: 1;
+    background-color: rgb(122, 255, 129);
+    height: 100px;
+    text-align: center;
+    
+}
