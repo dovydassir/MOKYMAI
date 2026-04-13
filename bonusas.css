@@ -1,0 +1,42 @@
+.parent {
+    width: 200px;
+    height: 200px;
+    border:2px solid black
+}
+.child1 {
+    
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    display: inline block;
+    animation: top-bottom 2s infinite;
+}
+
+.child.2 {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: blue;
+    display: inline block;
+    animation: top-bottom 2s infinite;
+    animation-delay: 1s;
+}
+ 
+body {
+    background-color: bisque;
+}
+
+@keyframes top-bottom {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateY(100%);
+    }
+    60% {
+        transform: translateY(50%) translateX(150%);
+    }
+    80% {
+        transform: translateX(50%) translateY(150%);
+    }
