@@ -189,7 +189,12 @@ footer {
 .cart-item {
     background: white;
     margin-bottom: 15px;
-
+}
+.iš-viso {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: aliceblue;
 }
 
 
