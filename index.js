@@ -64,3 +64,58 @@ console.log("KMI dzono", kmidzono);
 
 let markodiesnis= kmimarko > kmidzono;
 console.log("marko didesnis:", markodiesnis);
+
+let pirmassk = 10;
+let antrassk = 20;
+let treciassk = 20;
+
+if (pirmassk === antrassk) {
+  console.log("pirmas ir antras skaičius");
+}
+if (antrassk === treciassk) {
+  console.log("antras ir trečias yra lygūs");
+}
+if (pirmassk > antrassk) {
+  console.log("pirmas skaičius didesnis už antrajį");
+}
+if (antrassk > treciassk * 2) {
+  console.log("antras skaičius didesnis už dvigubą trečio");
+}
+if (pirmassk % 2 === 0) {
+  console.log("Pirmas skaičius yra lyginis");
+}
+if (antrassk % 2 !== 0) {
+  console.log("Antras skaičius yra nelyginis");
+}
+if (treciassk > 0 ) {
+  console.log("trecias skaičius teigiamas");
+}
+if (pirmassk > 0 ) {
+  console.log("pirmas skaičius teigiamas");
+}
+if (antrassk % 4 === 0) {
+  console.log("dalinasi iš 4");
+}
+if (treciassk % 8 === 0) {
+  console.log("dalinasi iš 8");
+}
+// uzduotis 2 //
+
+let vartotojo_amžius = 40;
+if (vartotojo_amžius > 18) {
+  console.log("jus galite balsuoti");
+}
+let pazimys1 = 5;
+let pazimys2 = 7;
+let pazimys3 = 8;
+let vidurkis = (pazimys1 + pazimys2 + pazimys3) / 3; 
+console.log("vidurkis:", vidurkis);
+if (vidurkis > 5) {
+  console.log("vidurkis teigiamas");
+}
+let uzd4 = 25;
+
+if (uzd4 % 5 === 0) {
+    console.log(`${uzd4} * 1 = ${uzd4 * 1}`);
+}
+ 
