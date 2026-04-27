@@ -118,4 +118,176 @@ let uzd4 = 25;
 if (uzd4 % 5 === 0) {
     console.log(`${uzd4} * 1 = ${uzd4 * 1}`);
 }
- 
+//15 pamoka
+//1 uzd.
+let spalva = "zalia";
+if (spalva === "zalia") {
+  console.log("eik");
+} else if (spalva === "geltona") {
+  console.log("pasiruosk");
+} else if (spalva === "raudona") {
+  console.log("stok");
+}
+//2uzd.
+let tmp = 15;
+if (tmp <0) {
+  console.log("salta");
+} else if (tmp <= 20) {
+  console.log("vesu");
+} else if (tmp < 20) {
+  console.log("silta");
+}
+//3uzd.
+let slapt = "1234";
+if (slapt === "1234") {
+  console.log("prisijungta");
+} else {
+  console.log("neteisingas");
+}
+//4uzd.
+let dalijasi = 4;
+if (dalijasi % 2 === 0) {
+  console.log("lyginis");
+} else {
+  console.log("nelyginis");
+}
+//5uzd.
+let amzius = 18;
+if (amzius <= 7) {
+  console.log("vaikas")
+} else if (amzius <= 17) {
+  console.log("mokinys")
+} else if (amzius <= 18) {
+  console.log("suauges");
+}
+//6uzd.
+let dienos = 3;
+
+switch (dienos) {
+    case 1:
+        console.log("Pirmadienis");
+        break;
+    case 2:
+        console.log("Antradienis");
+        break;
+    case 3:
+        console.log("Trečiadienis");
+        break;
+    case 4:
+        console.log("Ketvirtadienis");
+        break;
+    case 5:
+        console.log("Penktadienis");
+        break;
+    case 6:
+        console.log("Šeštadienis");
+        break;
+    case 7:
+        console.log("Sekmadienis");
+        break;
+}
+//7uzd.
+let vaisius = "obuolys";
+switch (vaisius) {
+  case "obuolys":
+    console.log("raudonas ir skanus");
+    break;
+  case "bananas":
+    console.log("geltonas ir saldus");
+    break;
+  case "apelsinas":
+    console.log(sultingas);
+    break;
+}
+//8uzd.
+let gyvunas = "šuo";
+switch (gyvunas) {
+  case "šuo":
+    console.log("au au");
+    break;
+  case "kate":
+    console.log("miau");
+    break
+  case "karvė":
+    console.log("muu")
+    break
+}
+
+//9uzd.
+
+let pazymiai = 8;
+switch (true) {
+  case (pazymiai === 10):
+    console.log("puiku");
+    break;
+  case (pazymiai >= 8):
+    console.log("gerai");
+    break;
+  case (pazymiai >= 5):
+    console.log("vidutiniskai")
+    break;
+  default:
+    console.log("pasistenk");
+}
+//10uzd.
+let mygtukas = "w";
+switch (mygtukas) {
+  case "w":
+    console.log("pirmyn");
+    break;
+}
+
+//loops
+//1uzd.
+
+for (let i = 1; i <=30; i++) {
+  if (i % 3 === 0) {
+    console.log(i)
+  }
+}
+//2uzd.
+console.log("uzd2")
+
+for (let i=1; i < 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i + "lyginis");
+  } else {
+    console.log(i + "nelyginis");
+  }
+}
+//3uzd
+console.log("uzd3")
+
+let suma = 0;
+
+for (let i = 1; i <= 50; i++) {
+    suma += i;
+    console.log("Tarpinė suma:", suma);
+}
+
+//4uzd
+console.log("uzd4")
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("fizzbuzz");
+  }else if (i % 3 === 0) {
+    console.log("fizz");
+  }else if (i % 5 === 0) {
+    console.log("buzz");
+  }else {
+    console.log(i)
+  }
+}
+//5uzd
+console.log("uzd5")
+let piramide = "";
+for (let i = 1; i <= 5; i++) {
+    piramide += i;
+    console.log(piramide);
+}
+//6uzd
+console.log("uzd6")
+
+
+
+
