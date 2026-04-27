@@ -1,0 +1,293 @@
+console.log('Hello from index.js!');
+
+const string = 'Hello World';
+const stringresult = `${string}${string}`;
+
+console.log('String:',string, typeof string);
+console.log('Stringresult:', stringresult);
+
+const number = 3.14;
+console.log('Number:', number, typeof number);
+
+const boolean = true;
+console.log('Boolean:', boolean, typeof boolean);
+
+const nullValue = null;
+console.log('Null:', nullValue, typeof nullValue);
+
+const undefinedValue = undefined;
+console.log('Undefined:', undefinedValue, typeof undefinedValue);
+
+const NaNValue = NaN;
+console.log('NaN:', NaNValue, typeof NaNValue);
+
+const array = [1, 2, 3];
+console.log('Array:', array, typeof array);
+
+const object = {
+  name: 'John',
+  age: 30,
+  isStudent: true,
+  hobbies: ['reading', 'coding', 'gaming'],
+};
+
+console.log('Object:', object, typeof object);
+
+const a= 1;
+console.log("kintamojo a reikšmė:", a);
+const b= 2;
+console.log("kintamojo a reikšmė:", b);
+
+const br = "Vardenis Pavardenis";
+const c =  "Mano vardas";
+
+console.log(`${c} ${br}`);
+ 
+let metai = 1997;
+let menuo = 5;
+let diena = 20;
+
+let viso = (metai % 10) + (menuo % 10) + (diena % 10);
+
+console.log(`Paskutinių skaitmenų suma: ${viso}`);
+
+let markoSvoris = 78;
+let markoUgis = 1.69;
+let dzonoSvoris = 92;
+let dzonoUgis = 1.95;
+
+let kmimarko = markoSvoris / (markoUgis *markoUgis);
+let kmidzono = dzonoSvoris / (dzonoUgis *dzonoUgis);
+
+console.log("KMI Marko:",kmimarko);
+console.log("KMI dzono", kmidzono);
+
+let markodiesnis= kmimarko > kmidzono;
+console.log("marko didesnis:", markodiesnis);
+
+let pirmassk = 10;
+let antrassk = 20;
+let treciassk = 20;
+
+if (pirmassk === antrassk) {
+  console.log("pirmas ir antras skaičius");
+}
+if (antrassk === treciassk) {
+  console.log("antras ir trečias yra lygūs");
+}
+if (pirmassk > antrassk) {
+  console.log("pirmas skaičius didesnis už antrajį");
+}
+if (antrassk > treciassk * 2) {
+  console.log("antras skaičius didesnis už dvigubą trečio");
+}
+if (pirmassk % 2 === 0) {
+  console.log("Pirmas skaičius yra lyginis");
+}
+if (antrassk % 2 !== 0) {
+  console.log("Antras skaičius yra nelyginis");
+}
+if (treciassk > 0 ) {
+  console.log("trecias skaičius teigiamas");
+}
+if (pirmassk > 0 ) {
+  console.log("pirmas skaičius teigiamas");
+}
+if (antrassk % 4 === 0) {
+  console.log("dalinasi iš 4");
+}
+if (treciassk % 8 === 0) {
+  console.log("dalinasi iš 8");
+}
+// uzduotis 2 //
+
+let vartotojo_amžius = 40;
+if (vartotojo_amžius > 18) {
+  console.log("jus galite balsuoti");
+}
+let pazimys1 = 5;
+let pazimys2 = 7;
+let pazimys3 = 8;
+let vidurkis = (pazimys1 + pazimys2 + pazimys3) / 3; 
+console.log("vidurkis:", vidurkis);
+if (vidurkis > 5) {
+  console.log("vidurkis teigiamas");
+}
+let uzd4 = 25;
+
+if (uzd4 % 5 === 0) {
+    console.log(`${uzd4} * 1 = ${uzd4 * 1}`);
+}
+//15 pamoka
+//1 uzd.
+let spalva = "zalia";
+if (spalva === "zalia") {
+  console.log("eik");
+} else if (spalva === "geltona") {
+  console.log("pasiruosk");
+} else if (spalva === "raudona") {
+  console.log("stok");
+}
+//2uzd.
+let tmp = 15;
+if (tmp <0) {
+  console.log("salta");
+} else if (tmp <= 20) {
+  console.log("vesu");
+} else if (tmp < 20) {
+  console.log("silta");
+}
+//3uzd.
+let slapt = "1234";
+if (slapt === "1234") {
+  console.log("prisijungta");
+} else {
+  console.log("neteisingas");
+}
+//4uzd.
+let dalijasi = 4;
+if (dalijasi % 2 === 0) {
+  console.log("lyginis");
+} else {
+  console.log("nelyginis");
+}
+//5uzd.
+let amzius = 18;
+if (amzius <= 7) {
+  console.log("vaikas")
+} else if (amzius <= 17) {
+  console.log("mokinys")
+} else if (amzius <= 18) {
+  console.log("suauges");
+}
+//6uzd.
+let dienos = 3;
+
+switch (dienos) {
+    case 1:
+        console.log("Pirmadienis");
+        break;
+    case 2:
+        console.log("Antradienis");
+        break;
+    case 3:
+        console.log("Trečiadienis");
+        break;
+    case 4:
+        console.log("Ketvirtadienis");
+        break;
+    case 5:
+        console.log("Penktadienis");
+        break;
+    case 6:
+        console.log("Šeštadienis");
+        break;
+    case 7:
+        console.log("Sekmadienis");
+        break;
+}
+//7uzd.
+let vaisius = "obuolys";
+switch (vaisius) {
+  case "obuolys":
+    console.log("raudonas ir skanus");
+    break;
+  case "bananas":
+    console.log("geltonas ir saldus");
+    break;
+  case "apelsinas":
+    console.log(sultingas);
+    break;
+}
+//8uzd.
+let gyvunas = "šuo";
+switch (gyvunas) {
+  case "šuo":
+    console.log("au au");
+    break;
+  case "kate":
+    console.log("miau");
+    break
+  case "karvė":
+    console.log("muu")
+    break
+}
+
+//9uzd.
+
+let pazymiai = 8;
+switch (true) {
+  case (pazymiai === 10):
+    console.log("puiku");
+    break;
+  case (pazymiai >= 8):
+    console.log("gerai");
+    break;
+  case (pazymiai >= 5):
+    console.log("vidutiniskai")
+    break;
+  default:
+    console.log("pasistenk");
+}
+//10uzd.
+let mygtukas = "w";
+switch (mygtukas) {
+  case "w":
+    console.log("pirmyn");
+    break;
+}
+
+//loops
+//1uzd.
+
+for (let i = 1; i <=30; i++) {
+  if (i % 3 === 0) {
+    console.log(i)
+  }
+}
+//2uzd.
+console.log("uzd2")
+
+for (let i=1; i < 20; i++) {
+  if (i % 2 === 0) {
+    console.log(i + "lyginis");
+  } else {
+    console.log(i + "nelyginis");
+  }
+}
+//3uzd
+console.log("uzd3")
+
+let suma = 0;
+
+for (let i = 1; i <= 50; i++) {
+    suma += i;
+    console.log("Tarpinė suma:", suma);
+}
+
+//4uzd
+console.log("uzd4")
+for (let i = 1; i <= 100; i++) {
+  if (i % 3 === 0 && i % 5 === 0) {
+    console.log("fizzbuzz");
+  }else if (i % 3 === 0) {
+    console.log("fizz");
+  }else if (i % 5 === 0) {
+    console.log("buzz");
+  }else {
+    console.log(i)
+  }
+}
+//5uzd
+console.log("uzd5")
+let piramide = "";
+for (let i = 1; i <= 5; i++) {
+    piramide += i;
+    console.log(piramide);
+}
+//6uzd
+console.log("uzd6")
+
+
+
+
