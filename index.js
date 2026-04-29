@@ -285,8 +285,56 @@ for (let i = 1; i <= 5; i++) {
     piramide += i;
     console.log(piramide);
 }
-//6uzd
-console.log("uzd6")
+
+
+//paskaita 16
+// masyvai
+console.log("masyvai uzduotys");
+
+//1uzd
+
+let maistas = ["makaronai","ledai","žuvis","pienas", "pica"];
+
+//2uzd
+console.log(maistas[0]);
+ 
+//3uzd.
+console.log(maistas[maistas.length-1]);
+
+//4uzd.
+console.log(maistas.length);
+//5uzd.
+maistas.push("kebabas");
+//6uzd.
+maistas.pop()
+console.log(maistas);
+//7uzd.
+maistas.forEach(item => {
+  console.log(item);
+});
+//8uzd.
+let masskaiciai = [1,2,3,4,5,6,-7,-8,10];
+let sumamassskaiciai = 0;
+masskaiciai.forEach(x => sumamassskaiciai += x);
+console.log(sumamassskaiciai);
+//9uzd.
+console.log(Math.min(...masskaiciai));
+//10uzd.
+console.log(Math.max(...masskaiciai));
+//11uzd.
+let kiek_lyginiu_masyve = masskaiciai.filter(x => x % 2 === 0).length;
+console.log(kiek_lyginiu_masyve);
+//12uzd.
+let Kiek_teigiamu = masskaiciai.filter(x => x > 0);
+console.log(Kiek_teigiamu);
+//13uzd.
+console.log(masskaiciai.map(x => x*2));
+//14uzd.
+console.log(masskaiciai.filter(x => x>0));
+//15uzd.
+console.log(masskaiciai.filter(x => x === 10));
+//16uzd.
+
 
 
 
