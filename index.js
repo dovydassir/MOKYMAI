@@ -334,8 +334,84 @@ console.log(masskaiciai.filter(x => x>0));
 //15uzd.
 console.log(masskaiciai.filter(x => x === 10));
 //16uzd.
+//17uzd.
+let apverstas = [...masskaiciai].reverse();
+console.log(apverstas);
+//18uzd.
+let surikiuotas = [...masskaiciai].sort((a, b) => a - b);
+console.log(surikiuotas);
+//19uzd.
+let kitas = [100, 200];
+let sujungtas = [...masskaiciai, ...kitas];
+console.log(sujungtas);
+//20uzd.
+let unikalus = [...new Set(masskaiciai)];
+console.log(unikalus);
+ 
+//paskaita17
+
+console.log("paskiata 17 uzduotys");
 
 
+console.log("uzd1"); //Duotas skaičių masyvas. Rask antrą didžiausią skaičių.
+let skaiciai17 = [1,5,9,3,8];
+let surikiuoti17 = [...skaiciai17].sort((a, b) => b-a );
+console.log(surikiuoti17[1]);
 
 
+console.log("uzd2"); //Patikrink, ar masyvas yra „palindromas“ (tas pats iš abiejų pusių)
+let masyvas17 = [1,2,3,2,1];
+let apverstas17 = [...masyvas17].reverse();
+console.log(masyvas17.toString() === apverstas17.toString());
 
+console.log("uzd3") //Sukurk naują masyvą, kuriame kiekvienas elementas būtų ankstesnių elementų suma (kaupiamoji suma).
+
+let rezultatas17 = [];
+let suma17 = 0;
+for (let i=0; i < skaiciai17.length; i++) {
+  suma17 += skaiciai17[1];
+  rezultatas17.push(suma);
+}
+console.log(rezultatas17);
+
+console.log("uzd4") //Rask elementą, kuris kartojasi dažniausiai.
+
+let skaiciai177 = [1,2,2,3,3,3,4];
+let kiekiai = {};
+skaiciai177.forEach(x => {
+  if (kiekiai[x]) {
+    kiekiai[x] = kiekiai[x] + 1;
+  } else {
+    kiekiai[x] = 1;
+  }
+});
+let dazniausias = skaiciai177[0];
+let max = 0;
+for (let key in kiekiai) {
+  if (kiekiai[key] > max) {
+    max = kiekiai[key];
+    dazniausias = key;
+  }
+}
+console.log(dazniausias);
+
+console.log("5uzd.") //Padalink masyvą į dvi dalis: mažesnius už vidurkį ir didesnius arba lygius vidurkiui.
+
+let skaiciai1777 = [1,2,3,4,5];
+let suma1777 = 0;
+
+skaiciai1777.forEach(x => {
+  suma1777 = suma1777 + x;
+});
+
+let vidurkis1777 = suma1777 / skaiciai1777.length;
+
+let mazi = skaiciai1777.filter(x => x < vidurkis1777);
+let dideli = skaiciai1777.filter(x => x >= vidurkis1777);
+
+console.log("mazesni:", mazi);
+console.log("didesni:", dideli);
+
+
+let skaiciai99 = [1,2,3,4];
+let
