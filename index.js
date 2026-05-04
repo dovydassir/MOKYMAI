@@ -645,7 +645,10 @@ studentai.forEach(studentas => {
   sumaPazymiu += studentas.pazimys;
 }); 
 let vidurkisPazymiu = sumaPazymiu / studentai.length;
+
 console.log("Vidurkis:", vidurkisPazymiu);  
+
+
 
 
 
