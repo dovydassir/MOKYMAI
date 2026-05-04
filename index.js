@@ -369,8 +369,8 @@ console.log("uzd3") //Sukurk naują masyvą, kuriame kiekvienas elementas būtų
 let rezultatas17 = [];
 let suma17 = 0;
 for (let i=0; i < skaiciai17.length; i++) {
-  suma17 += skaiciai17[1];
-  rezultatas17.push(suma);
+  suma17 += skaiciai17[i];
+  rezultatas17.push(suma17);
 }
 console.log(rezultatas17);
 
@@ -413,5 +413,239 @@ console.log("mazesni:", mazi);
 console.log("didesni:", dideli);
 
 
-let skaiciai99 = [1,2,3,4];
-let
+
+let pava = "skaiciai";
+let eilute = "";
+for (let i = 1; i < 10; i++) {
+  eilute += i;
+}
+console.log(eilute);
+ 
+
+
+for (let i = 5; i > 0; i--) {
+  console.log(i);
+}
+
+const MISS = [1,2,3,4,"LALALA"];
+MISS[4] = "VISAI NE LALALA";
+console.log(MISS);
+MISS.push("pushas");
+console.log(MISS);
+MISS.pop(3);
+console.log(MISS);
+
+function greetdov() {
+  const vardas = "dovydas";
+  console.log("hello" + " " + vardas);
+}
+greetdov();
+
+function greet(name) {
+  console.log("hello" + name);
+}
+
+greet("dovydas");
+greet(" solo");
+
+function siplayhalf(number) {
+const halfnum = number / 2;
+console.log(halfnum);
+}
+
+
+//paskaita 18
+console.log("paskaita 18 uzduotys");
+
+
+
+const persona = {
+  name: "Dovydas",
+  age: 28,
+  city: "Kaunas",
+  hobbies: ["plaukimas", "krepšinis", "kelionės"],
+  adress: {
+    street: "Gedimino pr.",
+    number: 10,
+    city: "Kaunas",
+    country: "Lietuva"
+  }
+}
+console.log(persona.name);
+
+//1uzd. objektas
+console.log("1uzd.");
+
+const zmogus = {
+  vardas: "Tomas",
+  amzius: 26,
+  miestas: "Vilnius",
+};
+
+console.log(zmogus);
+
+
+//2uzd. savybė
+console.log("2uzd.");
+
+console.log(zmogus.amzius);
+
+
+//3uzd. nauja savybė
+console.log("3uzd.");
+
+zmogus.pareigos = "programuotojas";
+console.log(zmogus);
+
+//4uzd. savybės pakeitimas
+console.log("4uzd.");
+
+zmogus.amzius = 27;
+console.log(zmogus);
+
+//5uzd. savybės egzistavimo tikrinimas
+console.log("5uzd.");
+
+console.log("miestas" in zmogus);
+
+//6uzd. savybių peržiūra
+console.log("6uzd."); 
+
+for (const key in zmogus) {
+  console.log(key);
+};
+
+//7uzd. savybių reikšmių peržiūra
+console.log("7uzd.");
+
+for (const key in zmogus) {
+  console.log(key,":", zmogus[key]);
+};
+
+//8uzd. savybių skaičiavimas
+console.log("8uzd.");
+
+let savybiuSkaicius = 0;
+for (let key in zmogus) {
+  savybiuSkaicius++;
+}
+console.log("Savybių skaičius:", savybiuSkaicius);
+
+//9uzd. savybių grupavimas į naują objektą 
+console.log("9uzd.");
+
+const naujasZmogus = {
+  zmogus1: zmogus,
+  zmogus2: {
+  vardas: "Miglė",
+  amzius: 22,
+  miestas: "Kaunas",
+}
+};
+
+console.log(naujasZmogus);
+
+//10uzd. sujungti du objektus į vieną
+console.log("10uzd.");
+
+const NAMAS = {
+  SROGAS: "JUODAS",
+  SIENOS: "BALTOS",
+};
+const SODAS = {
+  TVORA: "MEDINĖ",
+  ŽOLĖ: "ŽALIA",
+};
+
+const sujungtasObjektas = {...NAMAS, ...SODAS};
+console.log(sujungtasObjektas);
+
+//11uzd objektas su vidiniu objektu
+console.log("11uzd.");
+const AUTOMOBILIS = {
+  MARKĖ: "TOYOTA",
+  MODELIS: "COROLLA",
+  METAI: 2020,
+  SAVYBĖS: {
+    SPALVA: "BALTA",
+    VARIKLIS: "BENZINAS",
+    DURYS: 4,
+  }
+};  
+console.log(AUTOMOBILIS);
+
+//12uzd. pasiekti (nested) objekto savybę
+console.log("12uzd.");  
+
+console.log(AUTOMOBILIS.SAVYBĖS.SPALVA);
+
+//13uzd. ištrinti objekto savybę
+console.log("13uzd.");
+delete AUTOMOBILIS.METAI;
+console.log(AUTOMOBILIS);
+
+//14uzd. patikrinti, ar viso objerkto savybes skaičiai
+console.log("14uzd.");
+
+let arSkaiciai = true;
+for (let key in AUTOMOBILIS) {
+  if (typeof AUTOMOBILIS[key] !== "number") {
+    arSkaiciai = false;
+  }
+}
+console.log("Ar visos savybės skaičiai?", arSkaiciai);
+
+//15uzd. funkcija (truthy reiksmės tikrinimas)
+console.log("15uzd.");
+
+function tikrinkTruthy(value) {  
+  if (typeof value === "string") {
+    console.log(value, "yra truthy");
+  } else {
+    console.log(value, "nėra truthy");
+  }
+}
+tikrinkTruthy(0);
+tikrinkTruthy("tekstas");
+
+//16uzd. sukurti studentu masyvą su savybėmis
+console.log("16uzd.");
+const studentai = [
+  { vardas: "Tomas", pazimys: 7 },
+  { vardas: "Miglė", pazimys: 9 },
+  { vardas: "Dovydas", pazimys: 8 },
+];
+console.log(studentai); 
+
+//17uzd. rasti studentą su aukščiausiu pažymiu
+console.log("17uzd.");
+let geriausiasStudentas = studentai[0];
+
+for (let i = 1; i < studentai.length; i++) {
+  if (studentai[i].pazimys > geriausiasStudentas.pazimys) {
+    geriausiasStudentas = studentai[i];
+  }
+}
+console.log("Geriausias studentas:", geriausiasStudentas);
+
+//18uzd. rasti studenta su žemiausiu pažymiu
+console.log("18uzd.");
+let prasciausiasStudentas = studentai[0];
+for (let i=1; i < studentai.length; i++) {
+  if (studentai[i].pazimys < prasciausiasStudentas.pazimys) {
+    prasciausiasStudentas = studentai[i];
+  }
+}
+console.log("Prasciausias studentas:", prasciausiasStudentas);
+
+//19uzd. rasti vidurkį
+console.log("19uzd.");
+let sumaPazymiu = 0;  
+studentai.forEach(studentas => {
+  sumaPazymiu += studentas.pazimys;
+}); 
+let vidurkisPazymiu = sumaPazymiu / studentai.length;
+console.log("Vidurkis:", vidurkisPazymiu);  
+
+
+
