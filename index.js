@@ -473,7 +473,7 @@ const persona = {
 }
 console.log(persona.name);
 
-//1uzd. objektas
+
 console.log("1uzd.");
 
 const zmogus = {
@@ -485,44 +485,44 @@ const zmogus = {
 console.log(zmogus);
 
 
-//2uzd. savybė
+
 console.log("2uzd.");
 
 console.log(zmogus.amzius);
 
 
-//3uzd. nauja savybė
+
 console.log("3uzd.");
 
 zmogus.pareigos = "programuotojas";
 console.log(zmogus);
 
-//4uzd. savybės pakeitimas
+
 console.log("4uzd.");
 
 zmogus.amzius = 27;
 console.log(zmogus);
 
-//5uzd. savybės egzistavimo tikrinimas
+
 console.log("5uzd.");
 
 console.log("miestas" in zmogus);
 
-//6uzd. savybių peržiūra
+
 console.log("6uzd."); 
 
 for (const key in zmogus) {
   console.log(key);
 };
 
-//7uzd. savybių reikšmių peržiūra
+
 console.log("7uzd.");
 
 for (const key in zmogus) {
   console.log(key,":", zmogus[key]);
 };
 
-//8uzd. savybių skaičiavimas
+
 console.log("8uzd.");
 
 let savybiuSkaicius = 0;
@@ -531,7 +531,7 @@ for (let key in zmogus) {
 }
 console.log("Savybių skaičius:", savybiuSkaicius);
 
-//9uzd. savybių grupavimas į naują objektą 
+
 console.log("9uzd.");
 
 const naujasZmogus = {
@@ -545,7 +545,7 @@ const naujasZmogus = {
 
 console.log(naujasZmogus);
 
-//10uzd. sujungti du objektus į vieną
+
 console.log("10uzd.");
 
 const NAMAS = {
@@ -560,7 +560,7 @@ const SODAS = {
 const sujungtasObjektas = {...NAMAS, ...SODAS};
 console.log(sujungtasObjektas);
 
-//11uzd objektas su vidiniu objektu
+
 console.log("11uzd.");
 const AUTOMOBILIS = {
   MARKĖ: "TOYOTA",
@@ -574,17 +574,17 @@ const AUTOMOBILIS = {
 };  
 console.log(AUTOMOBILIS);
 
-//12uzd. pasiekti (nested) objekto savybę
+
 console.log("12uzd.");  
 
 console.log(AUTOMOBILIS.SAVYBĖS.SPALVA);
 
-//13uzd. ištrinti objekto savybę
+
 console.log("13uzd.");
 delete AUTOMOBILIS.METAI;
 console.log(AUTOMOBILIS);
 
-//14uzd. patikrinti, ar viso objerkto savybes skaičiai
+
 console.log("14uzd.");
 
 let arSkaiciai = true;
@@ -595,7 +595,7 @@ for (let key in AUTOMOBILIS) {
 }
 console.log("Ar visos savybės skaičiai?", arSkaiciai);
 
-//15uzd. funkcija (truthy reiksmės tikrinimas)
+
 console.log("15uzd.");
 
 function tikrinkTruthy(value) {  
@@ -608,16 +608,16 @@ function tikrinkTruthy(value) {
 tikrinkTruthy(0);
 tikrinkTruthy("tekstas");
 
-//16uzd. sukurti studentu masyvą su savybėmis
+
 console.log("16uzd.");
 const studentai = [
-  { vardas: "Tomas", pazimys: 7 },
-  { vardas: "Miglė", pazimys: 9 },
-  { vardas: "Dovydas", pazimys: 8 },
+  { vardas: "Tomas", pazimys: 7, amzius: 26, miestas: "Vilnius"},
+  { vardas: "Miglė", pazimys: 9, amzius: 22, miestas: "Kaunas"},
+  { vardas: "Dovydas", pazimys: 8, amzius: 28, miestas: "Klaipėda"},
 ];
 console.log(studentai); 
 
-//17uzd. rasti studentą su aukščiausiu pažymiu
+
 console.log("17uzd.");
 let geriausiasStudentas = studentai[0];
 
@@ -628,7 +628,7 @@ for (let i = 1; i < studentai.length; i++) {
 }
 console.log("Geriausias studentas:", geriausiasStudentas);
 
-//18uzd. rasti studenta su žemiausiu pažymiu
+
 console.log("18uzd.");
 let prasciausiasStudentas = studentai[0];
 for (let i=1; i < studentai.length; i++) {
@@ -638,7 +638,7 @@ for (let i=1; i < studentai.length; i++) {
 }
 console.log("Prasciausias studentas:", prasciausiasStudentas);
 
-//19uzd. rasti vidurkį
+
 console.log("19uzd.");
 let sumaPazymiu = 0;  
 studentai.forEach(studentas => {
@@ -649,6 +649,130 @@ let vidurkisPazymiu = sumaPazymiu / studentai.length;
 console.log("Vidurkis:", vidurkisPazymiu);  
 
 
+console.log("20uzd.");
+let islaikeStudentai = studentai
+.filter(studentas => studentas.pazimys >= 5);
+console.log("Studentai, kurie islaike:", islaikeStudentai);
 
+
+console.log("21uzd.");
+const surikiuotiPagalAmziu = [...studentai].sort((a,b) => b.amzius - a.amzius);
+console.log("Surikiuoti pagal amziu:", surikiuotiPagalAmziu);
+
+
+console.log("22uzd.");
+const surikiuotiPagalPazymius = [...studentai].sort((a, b) => b.pazimys - a.pazimys);
+console.log("Surikiuoti pagal pazymius:", surikiuotiPagalPazymius);
+
+
+console.log("23uzd.");
+const kaunieciai = studentai.filter(studentas => studentas.miestas === "Kaunas");
+console.log("Kaunieciai:", kaunieciai);
+
+
+//paskaita 19
+console.log("paskaita 19 uzduotys");
+
+
+
+console.log("1uzd.");
+
+function pasisveikinti() {
+  console.log("Labas!");    
+}
+pasisveikinti();
+
+console.log("2uzd.");
+
+function pasisveikintiVardas(vardas) {
+  console.log("Labas, " + vardas + "!");
+}
+pasisveikintiVardas("Dovydas");
+
+console.log("3uzd.");
+
+
+function lyginisNelyginis(skaicius) {
+  if (skaicius % 2 === 0) {
+    console.log(skaicius, "yra lyginis");
+  } else {
+    console.log(skaicius, "yra nelyginis");
+  }
+}
+lyginisNelyginis(5);
+lyginisNelyginis(8);
+
+console.log("4uzd.");
+
+
+function didesnisSkaicius(a, b) {
+  if (a > b) {
+    return a;
+  } else {
+    return b;
+  }     
+} 
+const didesnis = didesnisSkaicius(10, 20);  
+console.log("Didesnis skaičius:", didesnis);
+
+console.log("6uzd.");
+
+function sumaMasyvo(masyvas) {
+  let suma = 0;
+  masyvas.forEach(x => suma += x);
+  return suma;
+} 
+const skaiciai = [1, 2, 3, 4, 5];
+console.log(sumaMasyvo(skaiciai));
+
+console.log("7uzd.");
+
+function didziausiasMasyvo(masyvas) {
+  return Math.max(...masyvas);
+}
+const skaiciaiMasyve = [1, 5, 3, 9, 2];
+console.log(didziausiasMasyvo(skaiciaiMasyve));
+
+console.log("8uzd.");
+
+function kieksimboliu(masyvas) {
+  let simboliuSkaicius = 0;
+  masyvas.forEach(x => {
+    if (typeof x === "string") {
+      simboliuSkaicius++;
+    }
+  });
+  return simboliuSkaicius;
+}
+const masyvas = ["labas", 5, "pasauli", 10];
+console.log(kieksimboliu(masyvas));
+
+console.log("9uzd.");
+
+function apverstasTekstas(tekstas) {
+  return tekstas.split("").reverse().join("");
+}
+console.log(apverstasTekstas("labas"));
+
+console.log("10uzd.");
+
+function arPalindromas(tekstas) {
+  const apverstas = tekstas.split("").reverse().join("");
+  return tekstas === apverstas;
+}
+console.log(arPalindromas("savas"));
+console.log(arPalindromas("tekstas"));
+
+console.log("11uzd.");
+
+//uzd. skaiciu paiimti ir grazintti jo faktoriala
+function faktorialas(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  } else {
+    return n * faktorialas(n - 1);
+  }
+}
+console.log(faktorialas(5));
 
 
