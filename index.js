@@ -765,7 +765,6 @@ console.log(arPalindromas("tekstas"));
 
 console.log("11uzd.");
 
-//uzd. skaiciu paiimti ir grazintti jo faktoriala
 function faktorialas(n) {
   if (n === 0 || n === 1) {
     return 1;
@@ -774,5 +773,295 @@ function faktorialas(n) {
   }
 }
 console.log(faktorialas(5));
+
+
+console.log("12uzd.");
+function filtruotiLyginius(masyvas) {
+  return masyvas.filter(x => x % 2 === 0);
+} 
+const skaiciaiMasyve12 = [1, 2, 3, 4, 5, 6];
+console.log(filtruotiLyginius(skaiciaiMasyve12));
+
+
+console.log("13uzd.");
+function celsiusToFahrenheit(celsius) {
+  return (celsius * 9/5) + 32;
+}
+console.log(celsiusToFahrenheit(0));
+
+console.log("14uzd.");
+function unikalusElementai(masyvas) {
+  return [...new Set(masyvas)];
+} 
+console.log(unikalusElementai([1, 2, 2, 3, 3, 4]));   
+ 
+
+console.log("15uzd.");
+function sujungtiMasyvus(masyvas1, masyvas2) {
+  const sujungtas = [...masyvas1, ...masyvas2];
+  return [...new Set(sujungtas)];
+}
+console.log(sujungtiMasyvus([1, 2, 3], [3, 4, 5]));
+
+
+console.log("16uzd.");
+function dazniausiaiPasikartojantisSimbolis(tekstas) {
+  const simboliai = {};
+  for (let i = 0; i < tekstas.length; i++) {
+    const simbolis = tekstas[i];
+    if (simboliai[simbolis]) {
+      simboliai[simbolis]++;
+    }
+    else {
+      simboliai[simbolis] = 1;
+    } 
+  }
+  let dazniausias = tekstas[0];
+  let max = 0;
+  for (let key in simboliai) {
+    if (simboliai[key] > max) {
+      max = simboliai[key];
+      dazniausias = key;
+    } 
+  }
+  return dazniausias;
+} 
+console.log(dazniausiaiPasikartojantisSimbolis("labas pasauli"));
+
+console.log("17uzd.");
+function arAnagramas(tekstas1, tekstas2) {
+  const normalizuotasTekstas1 = tekstas1.replace(/\s/g, '').toLowerCase();
+  const normalizuotasTekstas2 = tekstas2.replace(/\s/g, '').toLowerCase();
+  const surikiuotasTekstas1 = normalizuotasTekstas1.split('').sort().join('');
+  const surikiuotasTekstas2 = normalizuotasTekstas2.split('').sort().join('');
+  return surikiuotasTekstas1 === surikiuotasTekstas2;
+} 
+console.log(arAnagramas("listen", "silent"));
+console.log(arAnagramas("hello", "world"));
+
+console.log("18uzd.");
+function fibonacci(n) {
+  if (n === 0) {
+    return 0;
+  } else if (n === 1) {
+    return 1;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  } 
+}
+console.log(fibonacci(10));
+
+console.log("19uzd.");
+
+function rastiPora(masyvas, suma) {
+  const poros = [];
+  for (let i = 0; i < masyvas.length; i++) {
+    for (let j = i + 1; j < masyvas.length; j++) {
+      if (masyvas[i] + masyvas[j] === suma) {
+        poros.push([masyvas[i], masyvas[j]]);
+      }
+    }
+  }
+  return poros;
+}   
+console.log(rastiPora([1, 2, 3, 4, 5], 5));
+
+console.log("20uzd.");
+function flatterintiMasyva(masyvas) {
+  const flatterintas = [];
+  masyvas.forEach(element => {
+    if (Array.isArray(element)) {
+      flatterintas.push(...flatterintiMasyva(element));
+    } else {
+      flatterintas.push(element);
+    }
+  });
+  return flatterintas;
+} 
+console.log(flatterintiMasyva([1, [2, 3], [4, [5, 6]], 7]));
+
+//paskaita 20
+console.log("paskaita 20 uzduotys");
+
+
+console.log("1uzd.");
+function isvestiSavybes(objektas) {
+  for (let key in objektas) {
+    console.log(key, ":", objektas[key]);
+  }   
+}
+const zmogus20 = {
+  vardas: "Tomas",
+  amzius: 26,
+  miestas: "Vilnius",
+};
+isvestiSavybes(zmogus20); 
+
+
+console.log("2uzd.");
+function skaiciuotiSavybes(objektas) {
+  let savybiuSkaicius = 0;
+  for (let key in objektas) {
+    savybiuSkaicius++;
+  }
+  return savybiuSkaicius;
+}
+console.log(skaiciuotiSavybes(zmogus20));
+
+console.log("3uzd.");
+
+
+const zmogus22 = {
+  vardas: "tadas",
+  amzius: 26,
+  miestas: "Vilnius", 
+  ugis: 1.80,
+};
+isvestiSavybes(zmogus22); 
+
+
+function arYraRaktas(objektas, raktas) {
+  return raktas in objektas;
+}
+console.log(arYraRaktas(zmogus22, "vardas"));
+console.log(arYraRaktas(zmogus22, "ugis"));
+
+
+
+console.log("4uzd.");
+function skaiciuSuma(objektas) {
+  let suma = 0;
+  for (let key in objektas) {
+    if (typeof objektas[key] === "number") {
+      suma += objektas[key];
+    }
+  } 
+  return suma;
+}
+console.log(skaiciuSuma(zmogus22)); 
+
+console.log("5uzd.");
+function pridetiSavybe(objektas, raktas, reiksme) {
+  objektas[raktas] = reiksme;
+}
+pridetiSavybe(zmogus22, "darbo vieta", "akropolis");
+isvestiSavybes(zmogus22);
+
+console.log("6uzd.");
+
+function kopijuotiObjekta(objektas) {
+  const kopija = {};
+  for (let key in objektas) {
+    kopija[key] = objektas[key];
+  }
+  return kopija;
+}
+console.log(kopijuotiObjekta(zmogus22));
+
+console.log("7uzd.");
+
+function sujungtiObjektus(objektas1, objektas2) {
+  return {...objektas1, ...objektas2};
+} 
+const objektas1 = {a: 1, b: 2};
+const objektas2 = {c: 3, d: 4};
+console.log(sujungtiObjektus(objektas1, objektas2));
+
+console.log("8uzd.");
+
+function pasalintiSavybe(objektas, raktas) {
+  delete objektas[raktas];
+}   
+pasalintiSavybe(zmogus22, "darbo vieta");
+isvestiSavybes(zmogus22);
+
+console.log("9uzd.");
+
+function filtruotiSavybes(objektas) {
+  const filtruotas = {};    
+  for (let key in objektas) {
+    if (typeof objektas[key] === "number") {
+      filtruotas[key] = objektas[key];
+    }
+
+  }
+  return filtruotas;
+}
+console.log(filtruotiSavybes(zmogus22));
+
+console.log("10uzd.");
+
+function pakeistiStringusDidziosiomis(objektas) {
+  const pakeistas = {};
+  for (let key in objektas) {
+    if (typeof objektas[key] === "string") {
+      pakeistas[key] = objektas[key].toUpperCase();
+    }
+    else {      pakeistas[key] = objektas[key];
+    } 
+  }
+  return pakeistas;
+}
+console.log(pakeistiStringusDidziosiomis(zmogus22));
+
+console.log("11uzd.");
+function rastiDidziausiaObjekta(objektai, raktas) {
+  let didziausiasObjektas = objektai[0];  
+  for (let i = 1; i < objektai.length; i++) {
+    if (objektai[i][raktas] > didziausiasObjektas[raktas]) {
+      didziausiasObjektas = objektai[i];
+    }
+  }
+  return didziausiasObjektas;
+} 
+const objektai = [
+  {vardas: "Tomas", amzius: 26},  
+  {vardas: "Miglė", amzius: 22},
+  {vardas: "Dovydas", amzius: 28},
+];
+console.log(rastiDidziausiaObjekta(objektai, "amzius"));
+
+console.log("12uzd.");
+function apskaiciuotiVidurki(objektas) {
+  let suma = 0;
+  let skaicius = 0;
+  for (let key in objektas) {
+    if (typeof objektas[key] === "number") {
+      suma += objektas[key];
+      skaicius++;
+    } 
+  }
+  return suma / skaicius;
+}
+const pazymiai123 = {
+  matematikos: 8,
+  lietuviu: 9,
+  anglų: 7,
+};
+console.log(apskaiciuotiVidurki(pazymiai123)); 
+
+console.log("13uzd.");
+
+function filtruotiPagalPazimi(objektai, raktas) {
+  return objektai.filter(objektas => objektas[raktas] > 5);
+} 
+const studentai123 = [
+  {vardas: "Tomas", pazimys: 7},
+  {vardas: "Miglė", pazimys: 9},
+  {vardas: "Dovydas", pazimys: 4},
+];
+console.log(filtruotiPagalPazimi(studentai123, "pazimys"));
+
+console.log("14uzd.");
+
+function surikiuotiPagalRakta(objektai, raktas) {
+  return [...objektai].sort((a, b) => a[raktas] - b[raktas]);
+}
+const studentai1234 = [
+  {vardas: "Tomas", pazimys: 7},
+  {vardas: "Miglė", pazimys: 9},
+  {vardas: "Dovydas", pazimys: 4},
+];
+console.log(surikiuotiPagalRakta(studentai1234, "pazimys"));
 
 
