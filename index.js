@@ -1,100 +1,160 @@
+console.log("uzd1.");
 
-console.log("1uzd.");
-const button = document.getElementsByClassName('myButton')[0];
+const pakeistiAntraste = () => {
+    document.querySelector(".antraste").textContent =
+        "Nauja antraštė";
+};
 
-button.addEventListener('click', function() {
-    console.log('Mygtukas paspaustas!');
-}); 
-
-console.log("2uzd.");
-
-const button2 = document.getElementsByClassName('myButton2')[0];
-button2.addEventListener('click', function() {
-    const heading = document.querySelector('h1');   
-    heading.textContent = 'Tekstas pakeistas!';
-});
+document
+    .querySelector(".btn1")
+.addEventListener("click", pakeistiAntraste);
 
 
-console.log("3uzd.");
 
-const heading = document.querySelector('h1');
-heading.addEventListener('click', function() {
-    heading.style.color = 'red';
-});
+console.log("uzd2");
 
-console.log("4uzd.");
+const pakeistiSpalva = () => {
+    document.querySelector(".tekstas").style.color =
+        "red";
+};
 
+document
+    .querySelector(".tekstas")
+    .addEventListener("click", pakeistiSpalva);
 
-function hideDiv() {
-    const div = document.querySelector('.myDIV');
-    div.style.display = 'none';
+console.log("uzd3");
+
+const paslepti = () => {
+    document.querySelector(".blokas").style.display = 
+    "none";
+};
+document
+.querySelector(".btn3")
+.addEventListener("click", paslepti);
+
+console.log("uzd4");
+
+const parodyti = () => {
+    document.querySelector(".blokas").style.display =
+    "block";
 }
+document
+.querySelector(".btn4")
+.addEventListener("click", parodyti);
 
-console.log("5uzd.");
-function showDiv() {
-    const div = document.querySelector('.myDIV');
-    div.style.display = 'block';
+
+console.log("uzd5")
+
+const keistiNuotrauka = () => {
+    document.querySelector(".img").src =
+        "https://picsum.photos/300";
+};
+
+document
+    .querySelector(".btn5")
+    .addEventListener("click", keistiNuotrauka);
+
+console.log("uzd6");
+
+
+const skaitliukas = () => {
+    document.querySelector(".skaitliukas").textContent++;
 }
+document
+.querySelector(".btn6")
+.addEventListener("click", skaitliukas);
 
-console.log("6uzd.");
+console.log("uzd7");
 
-let count = 0;
-const countButton = document.getElementsByClassName('countButton')[0];
-const countDisplay = document.getElementsByClassName('countDisplay')[0];
-countButton.addEventListener('click', function() {
-    count++;
-    countDisplay.textContent = 'Skaitliukas: ' + count;
-});
+let counter = 0;
 
-console.log("7uzd.");
+const plus2 = () => {
+    counter++;
 
-let count2 = 0;
-const countButton2Plus = document.getElementsByClassName('countButton2+')[0];
-const countButton2Minus = document.getElementsByClassName('countButton2-')[0];
-const countDisplay2 = document.getElementsByClassName('countDisplay2')[0];
-countButton2Plus.addEventListener('click', function() {
-    count2++;
-    countDisplay2.textContent = 'Skaitliukas2: ' + count2;
-});
-countButton2Minus.addEventListener('click', function() {
-    count2--;
-    countDisplay2.textContent = 'Skaitliukas2: ' + count2;
-}); 
+    document.querySelector(".counter").textContent =
+        counter;
+};
 
-console.log("8uzd.");
+const minus2 = () => {
+    counter--;
 
-const changeColorButton = document.getElementsByClassName('changeColorButton')[0];
-const myDiv2 = document.querySelector('.myDiv2');
+    document.querySelector(".counter").textContent =
+        counter;
+};
 
-changeColorButton.addEventListener('click', function() {
-    myDiv2.style.backgroundColor = 'red';
-});
+document
+.querySelector(".plus2")
+.addEventListener("click", plus2);
 
-console.log("9uzd.");
-
-myDiv2.addEventListener('mouseover', function() {
-    myDiv2.style.width = '50%';
-});
- 
-console.log("10uzd.");
-
-myDiv2.addEventListener('mouseout', function() {
-    myDiv2.style.width = '100%';
-});
+document
+.querySelector(".minus2")
+.addEventListener("click", minus2);
 
 
-console.log("11uzd.");
-document.addEventListener('keydown', function(event) {
-    document.getElementsByClassName('myParagraph')[0].textContent = 'paspaustas klavisas: ' + event.key;
-});
+console.log("uzd8");
 
 
-console.log("12uzd.");
 
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        alert('Paspaustas Enter klavisas!');
-    }
-});
+const randomColor = () => {
+    const red = Math.round(Math.random() * 255);
+    const green = Math.round(Math.random() * 255);
+    const blue = Math.round(Math.random() * 255);
+    document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+  };
+  
+  document.querySelector(".randomcolor").addEventListener("click", randomColor);
+
+console.log("uzd9");
+
+
+const naujasElementas = () => {
+    const naujasElementas = document.createElement("li");
+    naujasElementas.textContent = "Naujas elementas";
+    document.querySelector("ul").appendChild(naujasElementas);
+  };
+  
+  document.querySelector(".naujasElementas").addEventListener("click", naujasElementas);
+
+   
+    const pasalintiElementa = () => {
+        const elementai = document.querySelectorAll("li");
+        elementai[elementai.length - 1].remove();
+      };
+      
+      document.querySelector(".pasalintiElementa").addEventListener("click", pasalintiElementa);
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
 
 
