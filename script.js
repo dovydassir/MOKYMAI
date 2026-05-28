@@ -415,7 +415,7 @@ const objektas1 = JSON.parse(jsonObjektas);
 
 console.log(objektas1.vardas);
 
-//24 uzd. sukurk studento json objekta ir parodyk jo informacija puslapyje
+//24 
 
 const studentas = {
 
@@ -426,7 +426,7 @@ const studentas = {
 
 console.log(JSON.stringify(studentas));
 
-//25 sukurk produktu json masyva ir isvesk visu produktu pavadinimus
+//25 
 
 const produktai1 = [
     {
@@ -452,3 +452,96 @@ const produktai1 = [
 ];
 
 console.log(JSON.stringify(produktai1.map(produktas => produktas.pavadinimas)));    
+
+//26 uzd. 
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.log(error));
+
+//27 uzd. 
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.log(error));
+
+//28 uzd. 
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => response.json())
+.then(data => console.log(data[0].name))
+.catch(error => console.log(error));
+
+//29 
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => response.json())
+.then(data => console.log(data.map(user => user.name)))
+.catch(error => console.log(error));
+
+//30 
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.log(error));
+
+//31 uzd. 
+
+document.getElementById("loading").style.display = "block";
+
+fetch("https://jsonplaceholder.typicode.com/users")
+
+.then(response => response.json())
+
+.then(data => {
+
+    console.log(data);
+
+    document.getElementById("loading").style.display = "none";
+
+})
+.catch(error => console.log(error));
+
+//32 
+
+fetch("https://jsonplaceholder.typicode.com/users")
+
+.then(response => response.json())
+
+.then(data => {
+
+    console.log(data);
+
+    document.getElementById("loading").style.display = "none";
+
+})
+
+.catch(error => console.log(error));
+
+//33 uzd. 
+
+async function gautiDuomenis() {
+
+    try {
+
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        const data = await response.json();
+
+        console.log(data);
+
+    } catch(error) {
+
+        console.log(error);
+
+    }
+
+}
+
+gautiDuomenis();
+
+34// 
+
